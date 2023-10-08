@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+.callpage-container {
+  margin: 20px auto;
+  padding: 25px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.callpage-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: auto;
+  padding: 10px 25px;
+}
+
+.callpage-widget-title {
+  width: 70%;
+  text-align: center;
+  padding: 25px;
+}
+
+.callpage-widget-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.call-later {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.leave-message {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.book-meeting {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.callpage-widget-menu div {
+  padding: 15px;
+}
+
+.callpage-widget-menu i {
+  color: #52b2cf;
+}
+
+.form-submit-btn {
+  background-color: #52b2cf;
+  border: none;
+  color: white;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+
+.menu-border-item i {
+  color: #52b2cf;
+  margin-right: 5px;
+}
+
+.input-fields input,
+.input-fields label,
+.input-fields button {
+  padding: 5px 15px;
+  margin: 0 5px;
+  height: 40px;
+}
+
+.callpage-widget-info {
+  margin-top: 30px;
+  opacity: 60%;
+  justify-self: flex-end;
+}
+
+.callpage-widget-form h4 {
+  color: #52b2cf;
+}
+
+@media (max-width: 960px) {
+  .input-fields {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .callpage-widget-form {
+    text-align: center;
+  }
+
+  .callpage-widget-title {
+    width: 100%;
+  }
+
+  .menu-border-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .menu-border-item i {
+    margin-bottom: 5px;
+  }
+
+  .callpage-widget {
+    height: 400px;
+    position: relative;
+  }
+
+  .callpage-widget-info {
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: -100%;
+  }
+}

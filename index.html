@@ -10,6 +10,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <meta name="description" content="Delium Ubezpieczenia" />
 
     <!-- fonts -->
@@ -51,9 +53,7 @@
     <link rel="stylesheet" href="assets/css/delium-responsive.css" />
     <link rel="stylesheet" href="assets/css/color-4.css" />
     <link rel="stylesheet" href="assets/css/modal.css" />
-
-    <!-- Sender form JS -->
-    <script src="assets/js/senderForm.js"></script>
+    <link rel="stylesheet" href="assets/css/callpage.css">
 
 </head>
 
@@ -75,16 +75,43 @@
         <div class="modal-close-btn">
             <div class="fa fa-times close-btn" onClick="closeModal()"></div>
         </div>
-    <div class="modal-main-container">
-        <div class="modal-image">
+        <div class="modal-main-container">
+           
+                <div class="callpage-widget">
+                    <div class="callpage-widget-menu">
+                        <div class="call-now menu-border-item" id="menu-btn-phone" ><i class="fa fa-phone"></i> Zadzwoń teraz</div>
+                        <div class="call-later menu-border-item" id="menu-btn-timer"><i class="fa fa-clock"></i> Zadzwoń później</div>
+                        <div class="leave-message menu-border-item" id="menu-btn-envelope"><i class="fa fa-envelope"></i> Zostaw wiadomość</div>
+                        <div class="book-meeting menu-border-item" id="menu-btn-video"><i class="fa fa-calendar"></i> Umów spotkanie</div>
+                    </div>
+                    <div class="callpage-widget-title"><h3>Chesz żebym do Ciebie oddzwonił za chwilę?</h3></div>
+                    <div class="callpage-widget-form">
+                        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D06000001aPRw" method="POST">
+                            <input type=hidden name="oid" value="00D06000001aPRw">
+                            <input type=hidden name="retURL" value="http://delium.pl">
+                            <div class="input-fields">
+                                <input  id="phone" maxlength="40" name="phone" size="20" type="text" placeholder="+48 501 763 853"/><br>
+                                <input class="form-submit-btn" type="submit" name="submit" value="Zadzwoń do mnie teraz">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="callpage-widget-info">
+                        <p>Jesteś 5 osobą, która zamowiła dzisiaj rozmowę</p>
+                    </div>
+                </div>
+        
+        
+
+        <!-- <div class="modal-image">
             <img src="assets/images/modalForm/modal3.jpg" alt="modal image"/>
         </div>
+        
         <div class="form-container">
             <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
                 <input type=hidden name="oid" value="00D06000001aPRw">
                 <input type=hidden name="retURL" value="https://www.delium.pl/informacja-zwrotna.html">
-                <select style="display:none" id="lead_source" name="lead_source"><option value="Delium">Delium</option> </select><br>
+                <select style="display:none" id="lead_source" name="lead_source"><option value="Delium">Delium</option> </select><br> -->
                 <!-- <input  style="display:none"  id="00N0600000MMmbu" maxlength="80" name="00N0600000MMmbu" size="20" type="text" value="" /><br> -->
                 
                 <!--  ----------------------------------------------------------------------  -->
@@ -95,7 +122,7 @@
                 <!--  value="kontakt@dariuszgrzegorczyk.pl">                                  -->
                 <!--  ----------------------------------------------------------------------  -->
                 
-                <h3 style="text-align:center; color: red; font-weight:bold;">Dziękuję za ogromne zainteresowanie!</h3>
+                <!-- <h3 style="text-align:center; color: red; font-weight:bold;">Dziękuję za ogromne zainteresowanie!</h3>
                 <br>
                 <p>W związku z tym <span style="font-weight:bold">ilość miejc na konsultacje jest ograniczona</span>.</p>
                 <br>
@@ -112,7 +139,7 @@
                 
                 </form>
                 
-    </div>
+    </div> -->
     </div>
    </div>
     <!-- Modal -->
@@ -228,9 +255,9 @@
                         </div>
                         <!-- /.image-layer -->
 
-                        <div class="main-slider-four__shape-1 float-bob-y">
+                        <!-- <div class="main-slider-four__shape-1 float-bob-y">
                             <img src="assets/images/shapes/main-slider-four-shape-1.png" alt="">
-                        </div>
+                        </div> -->
                         <div class="main-slider-four__shape-2 float-bob-x">
                             <img src="assets/images/shapes/main-slider-four-shape-2.png" alt="">
                         </div>
@@ -1192,6 +1219,7 @@
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
     <script src="assets/vendors/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
     <script src="sliderValueCounter.js"></script>
+    <script src="/assets/js/callpage.js"></script>
 
 
 
